@@ -21,3 +21,9 @@ names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 dataset = read_csv(url, names=names)
 
 print(dataset.describe())
+
+# box and whisker plots
+dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+scatter_matrix(dataset)
+dataset.hist()
+pyplot.show()
