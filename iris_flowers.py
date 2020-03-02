@@ -53,4 +53,4 @@ for name, model in models:
 	cv_results = cross_val_score(model, X_train, Y_train, cv=kfold, scoring='accuracy')
 	results.append(cv_results)
 	names.append(name)
-	print(f'{name}: {cv_results.mean():.5f} ({cv_results.std():.3f})')
+	print(f'{name}: {cv_results.mean():.5f} ({cv_results.std():.5f})')
